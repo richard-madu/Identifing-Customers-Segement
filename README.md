@@ -22,39 +22,36 @@ This project will answer the following questions
 
 1. What segment has the highest return?
 
-2.
+2.What segment is over-represented?
+
+3. What segment is under-represented?
 
 # DATA UNDERSTANDING
 
-There are three data sets in this project
+The data for this project consist of two files:
 
-listings.csv
-calendar.csv
-reviews.csv
+- Udacity_AZDIAS_Subset.csv: demographics data for the general population of
+      Germany; 891211 persons (rows) x 85 features (columns)
+
+- Udacity_CUSTOMERS_Subset.csv: demographics data for customers of a mail-order
+      company; 191652 persons (rows) x 85 features (columns)
+
 
 # DATA PREPARATION
+Missing Values:
+The fourth column of the feature attributes summary (loaded in above as `feat_info`) documents the codes from the data dictionary that indicate missing or unknown data. While the file encodes this as a list (e.g. `[-1,0]`), this will get read in as a string object. You'll need to do a little bit of parsing to make use of it to identify and clean the data. Convert data that matches a 'missing' or 'unknown' value code into a numpy NaN value. You might want to see how much data takes on a 'missing' or 'unknown' code, and how much data is naturally missing, as a point of interest
 
-Dealing with incorrect data type: The price column and the date column in the calendar were strings. I created a function to convert the price variable to float.
+I dropped all the columns that the missing values constitute 20%
 
-def float_price(x):
+Re-Encode Features:
 
-‘’’
-input: dollar value with string dtype
-output: value in float
-‘’’
-if type(x)==str:
-x=x[1:].replace(“,” , ””)
-x=float(x)
-return x
+Checking for missing data isn't the only way in which I can prepare a dataset for analysis. Since the unsupervised learning techniques to be used will only work on data that is encoded numerically,I need to make a few encoding changes or additional assumptions to be able to make progress. In addition, while almost all of the values in the dataset are encoded using numbers, not all of them represent numeric values. Check the third column of the feature summary (feat_info) for a summary of types of measurement.
 
+> For numeric and interval data, these features can be kept without changes.
 
-This function takes the variable and removes the dollar sign and the comma sign then converts the remaining characters to float.
+> Most of the variables in the dataset are ordinal in nature. While ordinal values may technically be non-linear in spacing, making the simplifying assumption that the   ordinal variables can be treated as being interval in nature (that is, kept without any changes).
 
-For the date column, I used the PD.to_datetime function to convert it to a DateTime type.
-
-Dealing with missing variables: Missing variables were handled differently depending on the need of the analysis. For some cases I used zeros to fill the nan values other times I filled them with the mean of the column.
-
-Dealing with categorical variables: For categorical variables, I created a dummy variable
+> Special handling may be necessary for the remaining two variable types: categorical, and 'mixed'.
 
 # LIBRARIES USED
 
@@ -70,22 +67,11 @@ The following libraries were used to excute this project
 
 > 5. Scikit Learn
 
-> 6. WordCloud
-
 ## Installations
 This libraries work in latest python and they can be installed by running this code
 
 pip install -r requirement.txt
 
-# FILE DESCRIPTION
-
-> Airbnb.ipynb: Notebook containing the data analysis
-
-> calendar.csv: csv file containing bookings
-
-> listings.csv: CSV file containing information about listings
-
-> reviewa.csv: CSV file containing reviews
 
 # SUMMARY OF THE RESULTS
 
