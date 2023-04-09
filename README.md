@@ -89,16 +89,13 @@ pip install -r requirement.txt
 
 # SUMMARY OF THE RESULTS
 
-> * There are no significant difference between the prices of listings for each day. However, Fridays and Saturday have the highest prices but the numerical difference is not much
+Cluster 2 is overrepresented in the customers data compared to general population data. Some characteristics of the group of population that are relative popular with the mail-order company:
 
-> * There is a slight difference of about $5 between weekdays and weekends. Weekdays were encoded with 0s and weekends with 1, from the chart we can see that on weekends the average price is 140.89 and that of the weekdays is 135.75
+in areas where the share of 6-10 family homes is lower (PLZ8_ANTG3= 2.4)
+in Prosperous or Comfortable households (WEALTH=2.75)
+in life stage of Families With School Age Children or Older Families & Mature Couples (LIFE_STAGE=3.30)
+Cluster 13 is underrepresented in the customers data. Some characteristics of the segment of the population that are relatively unpopular with the company:
 
-> * The distribution of the prices in private rooms and shared rooms are almost the same with a large chunk of prices in the two room types are in the same range. However, the price of apartments have a higher range
-
-> * There is a strong positive correlationship in the cases of the number of people the listing can contain (accommodates) and the bedrooms in a particular listing with a correlational coefficient of 0.65 and 0.63 respectively. There is also a positive correlation between price and the amount paid as security deposit. However, the is a negative correlationship between the reviews per month and the price. I would be creating a linear regression to further investigate and validate these claims
-
-> * 51% variability in the price is explain by the independent variables I used. Also I would like to make further investigations to understand the model I created to see if the independent variables have a statistical significant effect on the dependent variables
-
-> * From the word cloud, we can see that words like internet, washer, dryer, smoke detector, and fire extinguisher stands out among other.
-
-> * There are more positive words used by the users in the comments section words like nice, perfect, easy, thank and great stands out. This indicated that users have a positive experience using Airbnb in Seattle.
+in areas where the share of 6-10 family homes is higher (PLZ8_ANTG3=2.44)
+in Less Affluent or Poorer households (WEALTH=4.4)
+in life stage of Pre-Family Couples & Singles or Young Couples With Children (LIFE_STAGE=1.98)
