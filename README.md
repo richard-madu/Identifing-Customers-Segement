@@ -13,6 +13,7 @@ At the end of most sections, there will be a Markdown cell labeled. In these cel
 ## DATA CREDIT
 
 UDACITY 
+
 AZDIAS
 
 # PROJECT MOTIVATION
@@ -53,6 +54,13 @@ Checking for missing data isn't the only way in which I can prepare a dataset fo
 
 > Special handling may be necessary for the remaining two variable types: categorical, and 'mixed'.
 
+Applying Feature Scaling:
+
+Before I apply dimensionality reduction techniques to the data, I will be performing feature scaling so that the principal component vectors are not influenced by the natural differences in scale for features. Starting from this part of the project, I'll keep an eye on the API reference page for sklearn to help me navigate to all of the classes and functions that I'll need
+
+Performance Dimensionality Reduction
+
+On my scaled data, I'm now ready to apply dimensionality reduction techniques. I used PCA to perform this task
 # LIBRARIES USED
 
 The following libraries were used to excute this project
