@@ -80,6 +80,10 @@ This libraries work in latest python and they can be installed by running this c
 
 pip install -r requirement.txt
 
+# ANALYSIS
+
+Considering the proportion of persons in each cluster for the general population, and the proportions for the customers. If we think the company's customer base to be universal, then the cluster assignment proportions should be fairly similar between the two. If there are only particular segments of the population that are interested in the company's products, then we should see a mismatch from one to the other. If there is a higher proportion of persons in a cluster for the customer data compared to the general population (e.g. 5% of persons are assigned to a cluster for the general population, but 15% of the customer data is closest to that cluster's centroid) then that suggests the people in that cluster to be a target audience for the company. On the other hand, the proportion of the data in a cluster being larger in the general population than the customer data (e.g. only 2% of customers closest to a population centroid that captures 6% of the data) suggests that group of persons to be outside of the target demographics.
+
 
 # SUMMARY OF THE RESULTS
 
@@ -93,3 +97,5 @@ Cluster 13 is underrepresented in the customers data. Some characteristics of th
 in areas where the share of 6-10 family homes is higher (PLZ8_ANTG3=2.44)
 in Less Affluent or Poorer households (WEALTH=4.4)
 in life stage of Pre-Family Couples & Singles or Young Couples With Children (LIFE_STAGE=1.98)
+
+From the analysis we can see that cluster 13 is the over-represented cluster therefore sould be the target demograph of the mailing company 
