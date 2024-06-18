@@ -14,11 +14,11 @@ At the end of most sections, there will be a Markdown cell labeled. In these cel
 
 UDACITY 
 
-AZDIAS
+AZ DIRECT GmbH
 
 # PROJECT MOTIVATION
 
-This project will help AZDIAS focus their advert on the customer segment that will give them the highest return
+This project will help AZ Direct focus their advert on the customer segment that will give them the highest return
 This project will answer the following questions
 
 1. What segment has the highest return?
